@@ -1,0 +1,41 @@
+.card_types_delivery {
+  position: relative;
+  /* width: 240px; */
+  /* height: 100px; */
+  background: #fff;
+  box-shadow: 0px 4px 24px #0000000f;
+  border-radius: 14px;
+}
+
+.card_types_delivery p {
+  /* position: absolute; */
+  /* width: 100%; */
+  /* top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0; */
+  padding: 40px 20px 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #473e43;
+}
+
+.icon_types_delivery {
+  position: absolute;
+  width: 78px;
+  height: 78px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.icon_types_delivery img {
+  width: 44px;
+  height: 44px;
+  margin: 50% auto 0;
+  transform: translateY(-56%);
+}

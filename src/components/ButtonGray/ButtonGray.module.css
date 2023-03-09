@@ -1,0 +1,21 @@
+.button__gray {
+  padding: 6px 26px;
+  background-color: #dcdcdf;
+  border-radius: 28px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #696f7a;
+  transition: background-color .4s ease-in-out;
+}
+
+.button__gray:hover {
+  background-color: #cececf;
+}
+
+.button__gray:focus {
+  outline: 1px solid #696f7a;
+  outline-offset: -3px;
+}

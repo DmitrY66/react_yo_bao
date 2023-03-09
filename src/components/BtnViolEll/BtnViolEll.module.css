@@ -1,0 +1,15 @@
+.btn_viol_ell {
+  padding: 0 20px;
+  border-radius: 23px;
+  background-color: #ff2e65;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.btn_viol_ell:hover {
+  background-color: #85394d;
+}

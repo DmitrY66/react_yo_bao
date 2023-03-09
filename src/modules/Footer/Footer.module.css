@@ -1,0 +1,23 @@
+.footer {
+  padding: 60px 45px;
+  display: flex;
+}
+
+@media (max-width: 1080px) {
+  .footer {
+    padding: 60px 25px;
+  }
+}
+
+@media (max-width: 940px) {
+  .footer {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 12px;
+  }
+}

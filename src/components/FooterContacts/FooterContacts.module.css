@@ -1,0 +1,109 @@
+.footer_contacts {
+  padding-top: 22px;
+  padding-left: 110px;
+}
+
+.footer_contacts h3 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: #0e0c0d;
+  margin-bottom: 36px;
+}
+
+.cotact_links {
+  display: grid;
+  grid-template-areas:
+    'item1 item2 item3 item4'
+    'item5 item6 item7 item7';
+  gap: 14px;
+
+  justify-content: start;
+  margin-bottom: 40px;
+}
+
+.cotact_links a:nth-child(1) {
+  grid-area: item1;
+}
+
+.cotact_links a:nth-child(2) {
+  grid-area: item2;
+}
+
+.cotact_links a:nth-child(3) {
+  grid-area: item3;
+}
+
+.cotact_links a:nth-child(4) {
+  grid-area: item4;
+}
+
+.cotact_links a:nth-child(5) {
+  grid-area: item5;
+}
+
+.cotact_links a:nth-child(6) {
+  grid-area: item6;
+}
+
+.btn_contacts {
+  width: 216px;
+  height: 52px;
+  border: 2px solid #dde7f1;
+  border-radius: 13px;
+  grid-area: item7;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in;
+}
+
+.btn_contacts:hover {
+  background-color: #dde7f1;
+}
+
+.margin_bottom {
+  position: relative;
+  height: 33px;
+}
+
+.margin_bottom::after {
+  content: url('src/img/chinese-noodles.svg');
+  position: absolute;
+  width: 240px;
+  top: -80px;
+  left: 200px;
+  transform: rotate(-5deg);
+}
+
+@media (max-width: 1080px) {
+  .footer_contacts {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 940px) {
+  .footer_contacts {
+    padding-left: 0;
+  }
+  .margin_bottom::after {
+    width: 130px;
+    top: -20px;
+    left: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cotact_links {
+    grid-template-areas:
+      'item1 item2'
+      'item3 item4'
+      'item5 item6'
+      'item7 item7';
+  }
+  .margin_bottom::after {
+    width: 100px;
+    top: -14px;
+    left: 190px;
+    transform: rotate(-40deg);
+  }
+}

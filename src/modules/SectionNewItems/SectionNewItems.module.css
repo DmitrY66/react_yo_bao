@@ -1,0 +1,52 @@
+.section_new_items {
+  padding: 30px 45px;
+}
+
+.section_new_items h2 {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.section_new_items h2::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: -80px;
+  transform: rotate(8deg);
+  width: 140px;
+  height: 140px;
+  background-image: url('../../img/onion.svg');
+  background-size: 140px 140px;
+  z-index: -1;
+}
+
+.new_items_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 1080px) {
+  .section_new_items {
+    padding: 30px 25px;
+  }
+  .section_new_items h2::before {
+    top: -40px;
+    left: 40px;
+    transform: rotate(100deg);
+  }
+  .new_items_list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section_new_items {
+    padding: 30px 12px;
+  }
+  .new_items_list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}

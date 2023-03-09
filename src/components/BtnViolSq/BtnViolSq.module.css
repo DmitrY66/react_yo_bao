@@ -1,0 +1,19 @@
+.btn__viol__sq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 18px;
+  background-color: #ff2e65;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .4s ease-in-out;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.btn__viol__sq:hover {
+  background-color: #85394d;
+}

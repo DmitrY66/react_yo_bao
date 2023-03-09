@@ -1,0 +1,28 @@
+.section_hero {
+  padding: 0 45px;
+}
+
+.section_hero_wrap {
+  height: 410px;
+  background-image: url('../../img/yo_bao-header.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1080px) {
+  .section_hero {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section_hero {
+    padding: 0 12px;
+  }
+  .section_hero_wrap {
+    height: 320px;
+  }
+}

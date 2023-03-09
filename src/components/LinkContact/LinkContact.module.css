@@ -1,0 +1,15 @@
+.link_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 50px;
+  border: 2px solid #dde7f1;
+  border-radius: 13px;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in;
+}
+
+.link_contact:hover {
+  background-color: #dde7f1;
+}

@@ -1,0 +1,36 @@
+.delivery {
+  display: block;
+}
+
+.delivery h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #231f20;
+}
+
+.delivery button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ff2e65;
+}
+
+.delivery__time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.delivery__time p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #231f20;
+}
+
+@media (max-width: 600px) {
+  .delivery {
+    display: none;
+  }
+}

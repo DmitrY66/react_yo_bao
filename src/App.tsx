@@ -1,21 +1,21 @@
-// import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Footer } from "./modules/Footer/Footer";
 import { Header } from "./modules/Header/Header";
-import { Main } from "./modules/Main/Main";
+import { Error } from "src/pages/Error/Error";
+import { Main } from "src/modules/Main/Main";
+import { Home } from "src/pages/Home/Home";
 
 const App = () => {
   return (
-    // <Routes>
-    //   <Route
-    //     path='*'
-    //     element={
-          <>
-            <Header />
-            <Main />
-            <Footer />
-          </>
-    //     } />
-    // </Routes>
+    <>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='cat/*' element={<Main />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 

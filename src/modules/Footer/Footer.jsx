@@ -5,7 +5,7 @@ import st from './Footer.module.css';
 export const Footer = () => {
 
   return (
-    <footer className={`${st.footer}  container`}>
+    <footer className={`${st.footer}  container`} id="footer">
       <FooterDiffInform />
       <FooterContacts />
     </footer>

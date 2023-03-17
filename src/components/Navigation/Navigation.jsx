@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import st from './Navigation.module.css';
 
 export const Navigation = () => {
@@ -6,16 +7,16 @@ export const Navigation = () => {
     <nav className={st.navigation}>
       <button className={st.btn_close}></button>
       <ul className={st.nav__list}>
-        <li className={st.nav__item}><a href="#!">Паста</a></li>
-        <li className={st.nav__item}><a href="#!">Супы</a></li>
-        <li className={st.nav__item}><a href="#!">Салаты</a></li>
-        <li className={st.nav__item}><a href="#!">Антипасти</a></li>
-        <li className={st.nav__item}><a href="#!">Напитки</a></li>
-        <li className={st.nav__item}><a href="#!">Десерты</a></li>
-        <li className={st.nav__item}><a href="#!">Бакалея</a></li>
-        <li className={st.nav__item}><a href="#!">Акции</a></li>
-        <li className={st.nav__item}><a href="#!">Комбо</a></li>
-        <li className={st.nav__item}><a href="#!">Контакты</a></li>
+        <li className={st.nav__item}><NavLink to="/">Home</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/pasta">Паста</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/soup">Супы</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/salads">Салаты</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/antipasti">Антипасти</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/drinks">Напитки</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/desserts">Десерты</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/cat/grocery">Бакалея</NavLink></li>
+        <li className={st.nav__item}><NavLink to="kokoko">Акции</NavLink></li>
+        <li className={st.nav__item}><a href="#footer">Контакты</a></li>
       </ul>
     </nav>
   )

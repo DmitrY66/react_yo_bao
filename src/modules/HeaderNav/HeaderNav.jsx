@@ -13,7 +13,6 @@ export const HeaderNav = () => {
       <button className={st.log_in}>Войти</button>
       
       <BtnViolSq>
-        {/* <p>Корзина</p> */}
         <svg xmlns="http://www.w3.org/2000/svg"
           height="28"
           width="28"

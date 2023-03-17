@@ -39,7 +39,7 @@ export const FooterContacts = () => {
 
   return (
     <div className={st.footer_contacts}>
-      <h3>Остались вопросы? А мы всегда на связи:</h3>
+      <h3>Остались вопросы? А&nbsp;мы&nbsp;всегда&nbsp;на&nbsp;связи:</h3>
       <div className={st.cotact_links}>
         {linksList.map(item =>
           <LinkContact

@@ -7,13 +7,14 @@
 }
 
 .btn_menu {
+  display: none;
   padding: 6px 24px;
   background-color: #f0f0f0;
   border-radius: 8px;
   cursor: pointer;
   outline: 1px solid #c3c3c6;
   outline-offset: -2px;
-  transition: background-color .4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
 
   font-weight: 600;
   font-size: 16px;
@@ -41,6 +42,9 @@
     justify-content: start;
     gap: 50px;
     padding: 0 25px;
+  }
+  .btn_menu {
+    display: block;
   }
 }
 

@@ -5,6 +5,8 @@ import { Categories } from "./pages/Categories/Categories";
 import { Layout } from "src/components/Layout/Layout";
 import { CatPasta } from "src/components/categoriesProd/CatPasta/CatPasta";
 import { CatSoup } from "src/components/categoriesProd/CatSoup/CatSoup";
+import { Contacts } from "src/pages/Contacts/Contacts";
+import { Actions } from "src/pages/Actions/Actions";
 
 const App = () => {
 
@@ -17,6 +19,8 @@ const App = () => {
             <Route path='pasta' element={<CatPasta />} />
             <Route path='soup' element={<CatSoup />} />
           </Route>
+          <Route path='contacts' element={<Contacts />} />
+          <Route path='actions' element={<Actions />} />
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>

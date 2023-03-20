@@ -1,7 +1,6 @@
-// import { CardTypesDelivery } from '../../components/CardTypesDelivery/CardTypesDelivery';
 import { CardTypesDelivery } from 'src/components/CardTypesDelivery/CardTypesDelivery';
 import st from './SectionPayDelivery.module.css';
-import googleMap from 'src/img/google-map.jpg'
+import { Map } from 'src/components/Map/Map';
 
 export const SectionPayDelivery = () => {
   const dataList = [
@@ -28,8 +27,6 @@ export const SectionPayDelivery = () => {
   ];
 
   return (
-
-    // <section className={st.section_pay_delivery}>
     <section className={st.section_pay_delivery}>
       <h2>Оплата и доставка</h2>
 
@@ -42,7 +39,7 @@ export const SectionPayDelivery = () => {
               text={item.text}
             />)}
         </ul>
-        <img className={st.pay_delivery_map} src={googleMap} alt="карта google" />
+        <Map />
       </div>
     </section>
   )

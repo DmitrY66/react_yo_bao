@@ -1,0 +1,27 @@
+.contacts {
+  padding-top: 30px;
+}
+
+.section_contacts {
+  padding: 0 45px;
+}
+
+.section_contacts h2 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ff2e65;
+}
+
+@media (max-width: 1080px) {
+  .section_contacts {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section_contacts {
+    padding: 0 12px;
+  }
+}

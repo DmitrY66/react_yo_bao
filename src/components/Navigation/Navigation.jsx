@@ -15,8 +15,8 @@ export const Navigation = () => {
         <li className={st.nav__item}><NavLink to="/cat/drinks">Напитки</NavLink></li>
         <li className={st.nav__item}><NavLink to="/cat/desserts">Десерты</NavLink></li>
         <li className={st.nav__item}><NavLink to="/cat/grocery">Бакалея</NavLink></li>
-        <li className={st.nav__item}><NavLink to="kokoko">Акции</NavLink></li>
-        <li className={st.nav__item}><a href="#footer">Контакты</a></li>
+        <li className={st.nav__item}><NavLink to="/actions">Акции</NavLink></li>
+        <li className={st.nav__item}><NavLink to="/contacts">Контакты</NavLink></li>
       </ul>
     </nav>
   )

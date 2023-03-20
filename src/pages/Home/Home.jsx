@@ -8,14 +8,12 @@ import { SectionProductCardsHome } from 'src/modules/SectionProductCardsHome/Sec
 export const Home = () => {
 
   return (
-    <>
-      <main className={st.main}>
-        <SectionHero />
-        <SectionNewItems />
-        <SectionProductCardsHome />
-        <SectionActions />
-        <SectionPayDelivery />
-      </main>
-    </>
+    <main className={st.main}>
+      <SectionHero />
+      <SectionNewItems />
+      <SectionProductCardsHome />
+      <SectionActions />
+      <SectionPayDelivery />
+    </main>
   )
 };

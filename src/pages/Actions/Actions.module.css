@@ -1,0 +1,45 @@
+.actions {
+  padding-top: 30px;
+}
+
+.section_actions {
+  padding: 0 45px;
+}
+
+.section_actions h2 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #ff2e65;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 30px;
+}
+
+@media (max-width: 1080px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section_actions {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section_actions {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 460px) {
+  .list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

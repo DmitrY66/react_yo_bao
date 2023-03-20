@@ -1,47 +1,47 @@
-.error404 {
+.error {
   padding: 80px 45px 80px;
   text-align: center;
 }
 
-.error404 h2 {
+.error h2 {
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
   color: #ff2e65;
 }
 
-.error404 img {
+.error img {
   width: 300px;
 }
 
-.error404_wrap {
+.error_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.error404_wrap p {
+.error_wrap p {
   font-weight: 700;
   font-size: 200px;
   color: #ff2e65;
 }
 
 @media (max-width: 1080px) {
-  .error404 {
+  .error {
     padding: 80px 25px 80px;
   }
 }
 @media (max-width: 600px) {
-  .error404 {
+  .error {
     padding: 80px 12px 40px;
   }
-  .error404 h2 {
+  .error h2 {
     font-size: 22px;
   }
-  .error404_wrap p {
+  .error_wrap p {
     font-size: 100px;
   }
-  .error404 img {
+  .error img {
     width: 150px;
   }
 }

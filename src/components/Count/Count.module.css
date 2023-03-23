@@ -1,0 +1,35 @@
+.count {
+  display: flex;
+  width: max-content;
+  color: #5c6370;
+  background-color: #dddde1;
+  border-radius: 8px;
+}
+
+.minus {
+  border-right: 1px solid #ccc;
+  padding: 0 14px 6px;
+  border-radius: 8px;
+}
+
+.minus:disabled {
+  cursor: not-allowed;
+  background-color: #d8d4d4;
+}
+
+.amount {
+  width: 60px;
+  text-align: center;
+  cursor: default;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+
+.plus {
+  border-left: 1px solid #ccc;
+  padding: 0 14px 4px;
+  border-radius: 8px;
+}

@@ -1,0 +1,69 @@
+.cartnavigation_list {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 70px;
+  margin-bottom: 50px;
+}
+
+.cartnavigation_item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cartnavigation_item:not(:last-child)::after {
+  content: url('/src/img/dotted-line.svg');
+  position: absolute;
+}
+
+.cartnavigation_item:nth-child(1):after {
+  left: 60px;
+}
+
+.cartnavigation_item:nth-child(2):after {
+  left: 103px;
+}
+
+.cartnavigation_item h4 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #ff2e65;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.cartnavigation_item p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #0e0c0dcc;
+  padding-top: 4px;
+}
+
+.cartnavigation_link {
+  color: #ff2e65;
+  border-radius: 50%;
+}
+
+.item_dotted {
+  width: 100px;
+  height: 30px;
+  border-top: 1px dotted #b8c5d0;
+}
+
+@media (max-width: 450px) {
+  .cartnavigation_list {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .cartnavigation_item:not(:last-child)::after {
+    display: none;
+  }
+}

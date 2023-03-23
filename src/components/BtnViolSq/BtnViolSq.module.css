@@ -1,5 +1,5 @@
 .btn__viol__sq {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;

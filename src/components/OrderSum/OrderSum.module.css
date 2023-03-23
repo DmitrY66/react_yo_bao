@@ -1,0 +1,95 @@
+.ordersum_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.ordersum h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #ff2e65;
+  margin-bottom: 15px;
+}
+
+.fieldset {
+  display: inline;
+  padding: 0;
+  height: 43px;
+  overflow: hidden;
+  border: 1px solid #e2e2e9;
+  border-radius: 8px;
+}
+
+.fieldset div {
+  height: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.fieldset p {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.fieldset input {
+  height: 100%;
+  border: none;
+  padding: 0 15px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.fieldset input:focus {
+  outline: 1px solid #dfdfdf;
+  outline-offset: -3px;
+}
+
+.total_sum {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.total_sum h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 17px;
+  color: #0e0c0d;
+}
+
+.total_sum p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: right;
+  color: #ff2e65;
+}
+
+@media (max-width: 400px) {
+  .fieldset {
+    height: 86px;
+    border: none;
+  }
+  .fieldset input {
+    width: 100%;
+    height: 43px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+  .fieldset div {
+    height: 43px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .total_sum h4 {
+    font-size: 20px;
+  }
+  .total_sum p {
+    font-size: 22px;
+  }
+}

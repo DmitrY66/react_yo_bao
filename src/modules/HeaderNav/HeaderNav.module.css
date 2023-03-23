@@ -1,9 +1,13 @@
-.header__nav {
+.header_nav {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 45px;
+}
+
+.header_nav_link {
+  border-radius: 8px;
 }
 
 .btn_menu {
@@ -38,7 +42,7 @@
 }
 
 @media (max-width: 1080px) {
-  .header__nav {
+  .header_nav {
     justify-content: start;
     gap: 50px;
     padding: 0 25px;
@@ -49,7 +53,7 @@
 }
 
 @media (max-width: 600px) {
-  .header__nav {
+  .header_nav {
     flex-wrap: wrap;
     gap: 10px;
     padding: 0 12px;
@@ -57,7 +61,7 @@
 }
 
 @media (max-width: 400px) {
-  .header__nav {
+  .header_nav {
     justify-content: space-between;
   }
 }

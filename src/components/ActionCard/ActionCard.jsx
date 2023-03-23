@@ -1,3 +1,4 @@
+import { BtnViolSq } from '../BtnViolSq/BtnViolSq';
 import st from './ActionCard.module.css';
 
 export const ActionCard = ({ actionphoto, title, description }) => {
@@ -11,8 +12,8 @@ export const ActionCard = ({ actionphoto, title, description }) => {
 
         <p tabIndex="0">{description}</p>
 
-
-        <button className={st.btn_mod}>Посмотреть</button>
+        <BtnViolSq className={st.btn_mod}>Посмотреть</BtnViolSq>
+        {/* <button className={st.btn_mod}>Посмотреть</button> */}
       </div>
     </li>
   )

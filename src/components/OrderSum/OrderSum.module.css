@@ -1,6 +1,10 @@
+.ordersum {
+  margin-bottom: 40px;
+}
+
 .ordersum_wrap {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
@@ -57,15 +61,15 @@
 
 .total_sum h4 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 17px;
   color: #0e0c0d;
 }
 
 .total_sum p {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 44px;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 36px;
   text-align: right;
   color: #ff2e65;
 }
@@ -87,7 +91,7 @@
     border-top-right-radius: 0;
   }
   .total_sum h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .total_sum p {
     font-size: 22px;

@@ -1,9 +1,9 @@
-import dataJson from 'src/data/data.json';
+import { useSelector } from 'react-redux';
 import setActionList from 'src/utils/setActionList';
 import st from './Actions.module.css';
 
 export const Actions = () => {
-  const dataListActios = dataJson.actios;
+  const dataListActios = useSelector((state) => state.getData.data.actions);
 
   return (
     <main className={st.actions}>

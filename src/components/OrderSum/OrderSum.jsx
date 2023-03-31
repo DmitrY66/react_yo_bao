@@ -1,7 +1,9 @@
+import { useSelector } from 'react-redux';
 import { BtnViolSq } from 'src/components/BtnViolSq/BtnViolSq';
 import st from './OrderSum.module.css';
 
 export const OrderSum = () => {
+  const {totalCount, totalPrice} = useSelector((state) => state.order);
 
   return (
     <div className={st.ordersum}>
@@ -16,9 +18,16 @@ export const OrderSum = () => {
           </fieldset>
         </form>
 
-        <div className={st.total_sum}>
-          <h4>Сумма заказа:</h4>
-          <p>1 048 ₽</p>
+        <div className={st.totalCounts}>
+          <div className={st.total_sum}>
+            <h4>Всего товаров:</h4>
+            <p>{totalCount}</p>
+          </div>
+
+          <div className={st.total_sum}>
+            <h4>Сумма заказа:</h4>
+            <p>{totalPrice}&nbsp;₽</p>
+          </div>
         </div>
       </div>
     </div>

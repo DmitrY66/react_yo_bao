@@ -9,6 +9,7 @@ const setActionList = (dataList) => {
       title={item.title}
       description={item.description}
       key={uuidv4()}
+      id={item.id}
     />
   );
 };

@@ -1,17 +1,20 @@
 import st from './CatPasta.module.css';
-import dataJson from 'src/data/data.json';
 import setProdList from 'src/utils/setProdList';
+import { useSelector } from 'react-redux';
 
 export const CatPasta = () => {
-  const dataListPasta = dataJson.pasta;
-  const category = dataListPasta[0].category;
+  const dataListPasta = useSelector((state) => state.getData.data.pasta);
 
   return (
     <>
-      <h2>{category}</h2>
-      <ul className={st.list}>
-        {setProdList(dataListPasta)}
-      </ul>
+      <h2>Паста</h2>
+
+      {dataListPasta.length ? (
+        <ul className={st.list}>
+          {setProdList(dataListPasta)}
+        </ul>) : (
+        <p className={st.notification}>Извините, товары данной категории временно отсутствуют</p>
+      )}
     </>
   )
 };

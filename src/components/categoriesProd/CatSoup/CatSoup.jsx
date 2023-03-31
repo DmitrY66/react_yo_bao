@@ -1,17 +1,20 @@
 import st from './CatSoup.module.css';
-import dataJson from 'src/data/data.json';
 import setProdList from 'src/utils/setProdList';
+import { useSelector } from 'react-redux';
 
 export const CatSoup = () => {
-  const dataListSoup = dataJson.soup;
-  const category = dataListSoup[0].category;
+  const dataListSoup = useSelector((state) => state.getData.data.soup);
 
   return (
     <>
-      <h2>{category}</h2>
-      <ul className={st.list}>
-        {setProdList(dataListSoup)}
-      </ul>
+      <h2>Супы</h2>
+
+      {dataListSoup.length ? (
+        <ul className={st.list}>
+          {setProdList(dataListSoup)}
+        </ul>) : (
+        <p className={st.notification}>Извините, товары данной категории временно отсутствуют</p>
+      )}
     </>
   )
 };

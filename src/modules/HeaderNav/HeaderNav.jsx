@@ -1,9 +1,12 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { BtnViolSq } from "src/components/BtnViolSq/BtnViolSq";
 import { Navigation } from "src/components/Navigation/Navigation";
 import st from './HeaderNav.module.css';
 
 export const HeaderNav = () => {
+  const { totalCount } = useSelector((state) => state.order);
+  console.log('totalCount: ', totalCount);
 
   return (
     <div className={`${st.header_nav} container`}>
@@ -32,7 +35,7 @@ export const HeaderNav = () => {
 
           <svg width="2" height="23" viewBox="0 0 2 23" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="2" height="23" rx="1" fill="currentColor" /></svg>
 
-          <p className={st.count}>1</p>
+          <p className={st.count}>{totalCount}</p>
         </BtnViolSq>
       </NavLink>
     </div>

@@ -25,6 +25,10 @@ const initialState = {
   error: []
 };
 
+// console.log(initialState.orderList);
+// console.log(initialState.totalCount);
+// console.log(initialState.totalPrice);
+
 export const localStorageMiddleware = store => next => action => {
   const nextAction = next(action);
 
@@ -44,20 +48,51 @@ const orderSlice = createSlice({
       const productOrderList = state.orderList
         .find(item => item.id === action.payload.id);
 
-      state.totalCount = state.orderList.reduce((acc, item) =>
-        acc + item.count, 1);
-
-      state.totalPrice = state.orderList.reduce((acc, item) =>
-        acc + item.count * item.price, 1);
-
       if (productOrderList) {
         productOrderList.count += 1;
+
+        // console.log('productOrderList.count: ', productOrderList.count);
+        // console.log('productOrderList.id: ', productOrderList.id);
+
       } else {
         state.orderList.push({ ...action.payload, count: 1 });
       }
+
+      state.totalCount = state.orderList.reduce(
+        (acc, item) => acc + item.count, 0);
+
+
+      state.totalPrice = state.orderList.reduce(
+        (acc, item) => acc + item.count * item.price, 0);
+    },
+
+
+
+    removeProduct: (state, action) => {
+      const productOrderList = state.orderList
+        .find(item => item.id === action.payload.id);
+
+      if (productOrderList.count > 1) {
+        productOrderList.count -= 1;
+
+        // console.log('productOrderList.count: ', productOrderList.count);
+        // console.log('productOrderList.id: ', productOrderList.id);
+
+      } else {
+        // state.orderList.push({ ...action.payload, count: 1 });
+        state.orderList = state.orderList
+          .filter(item => item.id !== action.payload.id);
+      }
+
+      state.totalCount = state.orderList.reduce(
+        (acc, item) => acc + item.count, 0);
+
+
+      state.totalPrice = state.orderList.reduce(
+        (acc, item) => acc + item.count * item.price, 0);
     }
   }
 });
 
-export const { addProduct } = orderSlice.actions;
+export const { addProduct, removeProduct } = orderSlice.actions;
 export default orderSlice.reducer;

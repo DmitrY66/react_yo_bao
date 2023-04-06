@@ -6,21 +6,21 @@ export const CartNavigation = () => {
   return (
     <ul className={st.cartnavigation_list}>
       <li className={st.cartnavigation_item}>
-        <NavLink className={st.cartnavigation_link} to="#">
+        <NavLink className={st.cartnavigation_link} to="/cart">
           <h4>1</h4>
         </NavLink>
         <p>Корзина</p>
       </li>
 
       <li className={st.cartnavigation_item}>
-        <NavLink className={st.cartnavigation_link} to="/cat">
+        <NavLink className={st.cartnavigation_link} to="/makingorder">
           <h4>2</h4>
         </NavLink>
         <p>Оформление заказа</p>
       </li>
 
       <li className={st.cartnavigation_item}>
-        <NavLink className={st.cartnavigation_link} to="/cat">
+        <NavLink className={st.cartnavigation_link} to="/ordersuccess">
           <h4>3</h4>
         </NavLink>
         <p>Заказ принят</p>

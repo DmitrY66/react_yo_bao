@@ -266,6 +266,11 @@ button {
   background-color: transparent;
 }
 
+input:focus {
+  outline: 1px solid #ccc;
+  outline-offset: -3px;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;

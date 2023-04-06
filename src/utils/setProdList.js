@@ -1,3 +1,5 @@
+// используется на страницах категорий товаров и на главной
+
 import { ProductCard } from 'src/components/ProductCard/ProductCard';
 import { v4 as uuidv4 } from 'uuid';
 

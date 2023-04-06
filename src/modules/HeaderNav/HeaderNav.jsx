@@ -6,7 +6,6 @@ import st from './HeaderNav.module.css';
 
 export const HeaderNav = () => {
   const { totalCount } = useSelector((state) => state.order);
-  console.log('totalCount: ', totalCount);
 
   return (
     <div className={`${st.header_nav} container`}>

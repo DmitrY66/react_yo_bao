@@ -1,15 +1,14 @@
-// используется на странице "Корзина"
+// используется на странице "Оформление заказа"
 
-import { Order } from 'src/components/Order/Order';
+import { OrderBrief } from 'src/components/OrderBrief/OrderBrief';
 import { v4 as uuidv4 } from 'uuid';
 
-const setOrderList = (dataList) => {
+const setOrderListBrief = (dataList) => {
 
   return dataList.map(item =>
-    <Order
+    <OrderBrief
       productphoto={item.productphoto ? item.productphoto : '../assets/img/no-photo.svg'}
       title={item.title}
-      description={item.description}
       price={item.price}
       count={item.count}
       key={uuidv4()}
@@ -18,4 +17,4 @@ const setOrderList = (dataList) => {
   );
 };
 
-export default setOrderList;
+export default setOrderListBrief;

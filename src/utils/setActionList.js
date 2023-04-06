@@ -1,3 +1,5 @@
+// используется на странице "Наши акции"
+
 import { ActionCard } from 'src/components/ActionCard/ActionCard';
 import { v4 as uuidv4 } from 'uuid';
 

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 36px;
+  gap: 10px;
   flex-wrap: wrap;
 
   /* max-width: 880px; */
@@ -16,17 +16,26 @@
   border-bottom: 1px solid #d2d2d2;
 }
 
+.order_wrap_block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
 .order_wrap_flax {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 25px;
   width: 420px;
 }
 
 .order_title {
+  width: 180px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 17px;
+  line-height: 20px;
   color: #231f20cc;
 }
 
@@ -57,4 +66,17 @@
   line-height: 20px;
   text-align: center;
   color: #231f20cc;
+}
+
+@media (max-width: 750px) {
+  .order_title {
+    width: 100%;
+  }
+  .order_wrap_block {
+    gap: 20px;
+  }
+  .order_wrap_flax {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }

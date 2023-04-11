@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import st from './SectionActions.module.css';
 import actionBanner from 'src/img/action-banner.png'
 
@@ -14,7 +15,7 @@ export const SectionActions = () => {
         <li><img src={actionBanner} alt="баннер рекламной акции" /></li>
         <li><img src={actionBanner} alt="баннер рекламной акции" /></li>
       </ul>
-      <button>Все вкции</button>
+      <Link to="/actions">Все вкции</Link>
     </section>
   )
 };

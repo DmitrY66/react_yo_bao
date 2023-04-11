@@ -58,6 +58,12 @@
   border-top: 1px dotted #b8c5d0;
 }
 
+.link_disabled {
+  color: #ff2e65;
+  pointer-events: none;
+  filter: opacity(60%);
+}
+
 @media (max-width: 450px) {
   .cartnavigation_list {
     gap: 30px;

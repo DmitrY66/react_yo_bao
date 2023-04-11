@@ -1,17 +1,13 @@
 import st from './OrderBrief.module.css';
-// import { Count } from 'src/components/Count/Count';
 
 export const OrderBrief = ({ productphoto, title, description, price, count, id }) => {
 
 
   return (
     <li className={st.order} >
-      <div className={st.order_wrap_flax}>
+      <div className={st.order_wrap_block}>
         <img className={st.order_img} src={productphoto} alt="фото товара" />
-        <div className={st.order_wrap_block}>
-          <h3 className={st.order_title}>{title}</h3>
-          <p className={st.order_description}>{description}</p>
-        </div>
+        <h4 className={st.order_title}>{title}</h4>
       </div>
 
       <div className={st.order_wrap_flax}>

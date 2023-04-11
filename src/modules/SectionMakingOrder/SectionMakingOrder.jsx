@@ -1,17 +1,32 @@
 import { CartNavigation } from 'src/components/CartNavigation/CartNavigation';
 import st from './SectionMakingOrder.module.css';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 import { BtnViolSq } from 'src/components/BtnViolSq/BtnViolSq';
 import setOrderListBrief from 'src/utils/setOrderListBrief';
+import { submitForm, updadeFormValue } from 'src/store/form/formSlice';
+import { OrderSum } from 'src/components/OrderSum/OrderSum';
 
 export const SectionMakingOrder = () => {
-  const orderList = useSelector((state) => state.order.orderList);
-  console.log('orderList: ', orderList);
+  // const orderList = useSelector((state) => state.order.orderList);
+  const order = useSelector((state) => state.order);
+  const form = useSelector((state) => state.form);
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
 
-  const hendler = () => {
-    console.log('ffff');
-  }
+  const handleInputChange = e => {
+    dispatch(updadeFormValue({
+      field: e.target.name,
+      value: e.target.value,
+    }))
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // dispatch(submitForm({ ...form, orderList }));
+    dispatch(submitForm({ ...form, order }));
+    navigate('/ordersuccess');
+  };
 
   return (
     <main className={st.main}>
@@ -23,7 +38,7 @@ export const SectionMakingOrder = () => {
             <CartNavigation />
 
             <div className={st.form_container}>
-              <form className={st.form} id='delivery'>
+              <form className={st.form} id='formorders' >
                 <fieldset className={st.fieldset}>
                   <label className={st.label}>
                     <span>Имя:</span>
@@ -32,7 +47,9 @@ export const SectionMakingOrder = () => {
                       className={st.input}
                       type='text'
                       name='name'
+                      value={form.name}
                       placeholder='Ваше имя'
+                      onChange={handleInputChange}
                     />
                   </label>
                   <label className={st.label}>
@@ -42,7 +59,9 @@ export const SectionMakingOrder = () => {
                       className={st.input}
                       type='tel'
                       name='phone'
+                      value={form.phone}
                       placeholder='Телефон'
+                      onChange={handleInputChange}
                     />
                   </label>
                 </fieldset>
@@ -56,8 +75,8 @@ export const SectionMakingOrder = () => {
                       type='radio'
                       name='format'
                       value='pickup'
-                      onChange={hendler}
-
+                      checked={form.format === 'pickup'}
+                      onChange={handleInputChange}
                     />
                   </label>
 
@@ -69,51 +88,59 @@ export const SectionMakingOrder = () => {
                       type='radio'
                       name='format'
                       value='delivery'
-                      onChange={hendler}
-
-                      checked
+                      checked={form.format === 'delivery'}
+                      onChange={handleInputChange}
                     />
                   </label>
                 </fieldset>
 
-                <fieldset className={st.fieldset}>
-                  <label className={st.label}>
-                    <span>Адрес:</span>
+                {form.format === 'delivery' && (
+                  <fieldset className={st.fieldset}>
+                    <label className={st.label}>
+                      <span>Адрес:</span>
 
-                    <div className={st.label_wpap}>
-                      <input
-                        className={st.input_100}
-                        type='text'
-                        name='address'
-                        placeholder='Улица'
-                      />
-                      <input
-                        className={[st.input_50]}
-                        type='number'
-                        name='homenumber'
-                        placeholder='Дом'
-                      />
-                      <input
-                        className={[st.input_50]}
-                        type='number'
-                        name='flatnumber'
-                        placeholder='Квартира'
-                      />
-                    </div>
-                  </label>
-                </fieldset>
+                      <div className={st.label_wpap}>
+                        <input
+                          className={st.input_100}
+                          type='text'
+                          name='street'
+                          value={form.street}
+                          placeholder='Улица'
+                          onChange={handleInputChange}
+                        />
+                        <input
+                          className={[st.input_50]}
+                          type='number'
+                          name='homenumber'
+                          value={form.homenumber}
+                          placeholder='Дом'
+                          onChange={handleInputChange}
+                        />
+                        <input
+                          className={[st.input_50]}
+                          type='number'
+                          name='flatnumber'
+                          value={form.flatnumber}
+                          placeholder='Квартира'
+                          onChange={handleInputChange}
+                        />
+                      </div>
+                    </label>
+                  </fieldset>
+                )}
+
+                <h3>Состав заказа:</h3>
+
+                {order.orderList.length ? (
+                  <ul className={st.order_list}>
+                    {setOrderListBrief(order.orderList)}
+                  </ul>
+                ) : (
+                  <p className={st.notification}>В корзине нет товаров</p>
+                )}
               </form>
 
-              <h3>Состав заказа:</h3>
-
-              {orderList.length ? (
-                <ul className={st.order_list}>
-                  {setOrderListBrief(orderList)}
-                </ul>
-              ) : (
-                <p className={st.notification}>В корзине нет товаров</p>
-              )}
-
+              <OrderSum />
 
               <div className={st.placeorder}>
                 <Link to="/">
@@ -123,7 +150,7 @@ export const SectionMakingOrder = () => {
                   <p>Вернуться в магазин</p>
                 </Link>
 
-                <div className={orderList.length ? '' : st.link_disabled} to="/makingorder">
+                <div className={order.orderList.length ? '' : st.disabled} onClick={handleSubmit}>
                   <BtnViolSq>
                     <p><span>Отправить заказ</span></p>
 

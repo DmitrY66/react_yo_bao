@@ -25,10 +25,6 @@ const initialState = {
   error: []
 };
 
-// console.log(initialState.orderList);
-// console.log(initialState.totalCount);
-// console.log(initialState.totalPrice);
-
 export const localStorageMiddleware = store => next => action => {
   const nextAction = next(action);
 
@@ -50,10 +46,6 @@ const orderSlice = createSlice({
 
       if (productOrderList) {
         productOrderList.count += 1;
-
-        // console.log('productOrderList.count: ', productOrderList.count);
-        // console.log('productOrderList.id: ', productOrderList.id);
-
       } else {
         state.orderList.push({ ...action.payload, count: 1 });
       }
@@ -66,20 +58,13 @@ const orderSlice = createSlice({
         (acc, item) => acc + item.count * item.price, 0);
     },
 
-
-
     removeProduct: (state, action) => {
       const productOrderList = state.orderList
         .find(item => item.id === action.payload.id);
 
       if (productOrderList.count > 1) {
         productOrderList.count -= 1;
-
-        // console.log('productOrderList.count: ', productOrderList.count);
-        // console.log('productOrderList.id: ', productOrderList.id);
-
       } else {
-        // state.orderList.push({ ...action.payload, count: 1 });
         state.orderList = state.orderList
           .filter(item => item.id !== action.payload.id);
       }
@@ -90,9 +75,15 @@ const orderSlice = createSlice({
 
       state.totalPrice = state.orderList.reduce(
         (acc, item) => acc + item.count * item.price, 0);
+    },
+
+    clearOrder: (state) => {
+      state.orderList = [];
+      state.totalCount = 0;
+      state.totalPrice = 0;
     }
   }
 });
 
-export const { addProduct, removeProduct } = orderSlice.actions;
+export const { addProduct, removeProduct, clearOrder } = orderSlice.actions;
 export default orderSlice.reducer;

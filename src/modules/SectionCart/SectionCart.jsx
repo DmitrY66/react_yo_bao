@@ -8,7 +8,6 @@ import st from './SectionCart.module.css';
 
 export const SectionCart = () => {
   const orderList = useSelector((state) => state.order.orderList);
-  console.log('orderList: ', orderList);
 
   return (
     <main className={st.main}>

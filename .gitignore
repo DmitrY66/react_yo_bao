@@ -4,6 +4,7 @@
 /node_modules
 /.hygen
 .hygen.js
+# .eslintrc.js
 /.pnp
 .pnp.js
 

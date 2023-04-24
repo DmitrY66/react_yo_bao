@@ -1,20 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const getOrderList = () => {
-  const orderList = JSON.parse(localStorage.getItem('order'))
-    ? JSON.parse(localStorage.getItem('order')).orderList : [];
+  const orderList = JSON.parse(localStorage.getItem('order')) ?
+    JSON.parse(localStorage.getItem('order')).orderList : [];
   return orderList;
 }
 
 const getTotalCount = () => {
-  const totalCount = JSON.parse(localStorage.getItem('order'))
-    ? JSON.parse(localStorage.getItem('order')).totalCount : 0;
+  const totalCount = JSON.parse(localStorage.getItem('order')) ?
+    JSON.parse(localStorage.getItem('order')).totalCount : 0;
   return totalCount;
 }
 
 const getTotalPrice = () => {
-  const totalPrice = JSON.parse(localStorage.getItem('order'))
-    ? JSON.parse(localStorage.getItem('order')).totalPrice : 0;
+  const totalPrice = JSON.parse(localStorage.getItem('order')) ?
+    JSON.parse(localStorage.getItem('order')).totalPrice : 0;
   return totalPrice;
 }
 

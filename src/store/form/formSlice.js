@@ -1,14 +1,19 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { API_URI_PLACEHOLDER } from "src/consts";
-import { clearOrder } from "../order/orderSlice";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { API_URI_PLACEHOLDER } from 'src/consts';
+import { clearOrder } from '../order/orderSlice';
 
 const initialState = {
   name: '',
+  nameValid: false,
   phone: '',
+  phoneValid: false,
   format: 'delivery',
   street: '',
+  streetValid: false,
   homenumber: '',
-  flatnumber: ''
+  homenumberValid: false,
+  flatnumber: '',
+  flatnumberValid: false,
 };
 
 export const submitForm = createAsyncThunk(
@@ -44,8 +49,35 @@ const formSlice = createSlice({
   initialState,
   reducers: {
     updadeFormValue: (state, action) => {
+      // console.log(action);
       state[action.payload.field] = action.payload.value;
-    }
+    },
+
+    validationName: (state, action) => {
+      // console.log(action);
+      state.nameValid = action.payload.validName;
+    },
+
+    validationPhone: (state, action) => {
+      // console.log(action);
+      state.phoneValid = action.payload.validPhone;
+    },
+
+    validationStreet: (state, action) => {
+      // console.log(action);
+      state.streetValid = action.payload.validStreet;
+    },
+
+    validationHomenumber: (state, action) => {
+      // console.log(action);
+      state.homenumberValid = action.payload.validHomenumber;
+    },
+
+    validationFlatnumber: (state, action) => {
+      // console.log(action);
+      state.flatnumberValid = action.payload.validFlatnumber;
+    },
+
   },
   extraReducers: builder => {
     builder
@@ -58,19 +90,31 @@ const formSlice = createSlice({
         state.status = 'success';
         state.response = action.payload;
         state.name = '';
+        state.nameValid = false;
         state.phone = '';
+        state.phoneValid = false;
         state.format = 'delivery';
         state.street = '';
+        state.streetValid = false;
         state.homenumber = '';
+        state.homenumberValid = false;
         state.flatnumber = '';
+        state.flatnumberValid = false;
         localStorage.removeItem('order');
       })
       .addCase(submitForm.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.payload;
-      })
+      });
   }
 });
 
-export const { updadeFormValue } = formSlice.actions;
+export const {
+  updadeFormValue,
+  validationName,
+  validationPhone,
+  validationStreet,
+  validationHomenumber,
+  validationFlatnumber
+} = formSlice.actions;
 export default formSlice.reducer;

@@ -25,11 +25,11 @@ export const ProductCard = ({ productphoto, title, description, price, id }) => 
             title: title,
             description: description,
             price: price,
-          }))
+          }));
         }}>
           <BtnViolEll>В корзину</BtnViolEll>
         </span>
       </div>
     </li>
-  )
+  );
 };

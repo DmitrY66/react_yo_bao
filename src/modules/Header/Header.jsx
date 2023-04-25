@@ -8,7 +8,7 @@ export const Header = () => {
 
   const handlerNavFixed = () => {
     if (window !== undefined) {
-      let heightWindow = window.scrollY;
+      const heightWindow = window.scrollY;
       heightWindow > 75 ? setHeaderFix(true) : setHeaderFix(false);
     }
   };

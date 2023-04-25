@@ -4,7 +4,6 @@ import { Count } from 'src/components/Count/Count';
 
 export const Order = ({ productphoto, title, description, price, count, id }) => {
 
-
   return (
     <li className={st.order} >
       <div className={st.order_wrap_flax}>

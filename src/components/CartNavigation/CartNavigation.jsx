@@ -9,8 +9,8 @@ export const CartNavigation = () => {
       <li className={st.cartnavigation_item}>
         <NavLink
           className={
-            pathname === '/makingorder' || pathname === '/ordersuccess'
-              ? st.link_disabled : st.cartnavigation_link
+            pathname === '/makingorder' || pathname === '/ordersuccess' ?
+              st.link_disabled : st.cartnavigation_link
           }
           to="/cart">
           <h4>1</h4>
@@ -21,8 +21,8 @@ export const CartNavigation = () => {
       <li className={st.cartnavigation_item}>
         <NavLink
           className={
-            pathname === '/cart' || pathname === '/ordersuccess'
-              ? st.link_disabled : st.cartnavigation_link
+            pathname === '/cart' || pathname === '/ordersuccess' ?
+              st.link_disabled : st.cartnavigation_link
           }
           to="/makingorder">
           <h4>2</h4>
@@ -33,8 +33,8 @@ export const CartNavigation = () => {
       <li className={st.cartnavigation_item}>
         <NavLink
           className={
-            pathname === '/cart' || pathname === '/makingorder'
-              ? st.link_disabled : st.cartnavigation_link
+            pathname === '/cart' || pathname === '/makingorder' ?
+              st.link_disabled : st.cartnavigation_link
           }
           to="/ordersuccess">
           <h4>3</h4>

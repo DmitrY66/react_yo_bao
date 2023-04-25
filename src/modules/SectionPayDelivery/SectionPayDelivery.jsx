@@ -5,24 +5,24 @@ import { Map } from 'src/components/Map/Map';
 export const SectionPayDelivery = () => {
   const dataList = [
     {
-      "id": "1223980593n",
-      "imgPath": "assets/img/icons/types_delivery1.svg",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      'id': '1223980593n',
+      'imgPath': 'assets/img/icons/types_delivery1.svg',
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-      "id": "1223980593a",
-      "imgPath": "assets/img/icons/types_delivery2.svg",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      'id': '1223980593a',
+      'imgPath': 'assets/img/icons/types_delivery2.svg',
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-      "id": "1223980593s",
-      "imgPath": "assets/img/icons/types_delivery3.svg",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      'id': '1223980593s',
+      'imgPath': 'assets/img/icons/types_delivery3.svg',
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
     {
-      "id": "1223980593d",
-      "imgPath": "assets/img/icons/types_delivery4.svg",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      'id': '1223980593d',
+      'imgPath': 'assets/img/icons/types_delivery4.svg',
+      'text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
     },
   ];
 

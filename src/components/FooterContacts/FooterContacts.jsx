@@ -6,34 +6,34 @@ import st from './FooterContacts.module.css';
 export const FooterContacts = () => {
   const linksList = [
     {
-      "id": "12er80593ny",
-      "imgPath": "assets/img/icons/contact-viber.svg",
-      "link": "#!"
+      'id': '12er80593ny',
+      'imgPath': 'assets/img/icons/contact-viber.svg',
+      'link': '#!'
     },
     {
-      "id": "12er80593qw",
-      "imgPath": "assets/img/icons/contact-skype.svg",
-      "link": "#!"
+      'id': '12er80593qw',
+      'imgPath': 'assets/img/icons/contact-skype.svg',
+      'link': '#!'
     },
     {
-      "id": "12er80593n4",
-      "imgPath": "assets/img/icons/contact-zoom.svg",
-      "link": "#!"
+      'id': '12er80593n4',
+      'imgPath': 'assets/img/icons/contact-zoom.svg',
+      'link': '#!'
     },
     {
-      "id": "12er80593n1",
-      "imgPath": "assets/img/icons/contact-telegram.svg",
-      "link": "#!"
+      'id': '12er80593n1',
+      'imgPath': 'assets/img/icons/contact-telegram.svg',
+      'link': '#!'
     },
     {
-      "id": "12er80593nl",
-      "imgPath": "assets/img/icons/contact-facebook.svg",
-      "link": "#!"
+      'id': '12er80593nl',
+      'imgPath': 'assets/img/icons/contact-facebook.svg',
+      'link': '#!'
     },
     {
-      "id": "12er80593nm",
-      "imgPath": "assets/img/icons/contact-vk.svg",
-      "link": "#!"
+      'id': '12er80593nm',
+      'imgPath': 'assets/img/icons/contact-vk.svg',
+      'link': '#!'
     }
   ];
 

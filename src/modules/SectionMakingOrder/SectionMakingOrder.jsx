@@ -11,14 +11,13 @@ import {
   validationPhone,
   validationStreet,
   validationHomenumber,
-  validationFlatnumber
+  validationFlatnumber,
 } from 'src/store/form/formSlice';
 import { OrderSum } from 'src/components/OrderSum/OrderSum';
 
 export const SectionMakingOrder = () => {
   const order = useSelector((state) => state.order);
   const form = useSelector((state) => state.form);
-  // console.log('form: ', form);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,7 +28,6 @@ export const SectionMakingOrder = () => {
   const patternFlatnumber = /^\d{1,4}$/;
 
   const formValidation = () => {
-    // console.log(form);
     if (form.format === 'delivery') {
       if (
         form.nameValid &&
@@ -50,7 +48,6 @@ export const SectionMakingOrder = () => {
         return false;
       }
     }
-
   };
 
   const handleInputChange = (e, pattern) => {
@@ -108,7 +105,12 @@ export const SectionMakingOrder = () => {
   };
 
   const handleSubmit = () => {
-    dispatch(submitForm({ ...form, order }));
+    const formCopy = { ...form }
+    formCopy.status = 'cleared';
+    formCopy.response = null;
+
+    dispatch(submitForm({ ...formCopy, order }));
+
     navigate('/ordersuccess');
   };
 
@@ -235,7 +237,6 @@ export const SectionMakingOrder = () => {
                   </fieldset>
                 )}
 
-
                 <h3>Состав заказа:</h3>
 
                 {order.orderList.length ? (
@@ -272,8 +273,6 @@ export const SectionMakingOrder = () => {
                     </svg>
                   </BtnViolSq>
                 </div>
-
-
               </div>
             </div>
           </div>

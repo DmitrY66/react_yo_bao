@@ -14,6 +14,9 @@ const initialState = {
   homenumberValid: false,
   flatnumber: '',
   flatnumberValid: false,
+  status: '',
+  response: null,
+  error: null,
 };
 
 export const submitForm = createAsyncThunk(
@@ -77,7 +80,6 @@ const formSlice = createSlice({
       // console.log(action);
       state.flatnumberValid = action.payload.validFlatnumber;
     },
-
   },
   extraReducers: builder => {
     builder
@@ -115,6 +117,6 @@ export const {
   validationPhone,
   validationStreet,
   validationHomenumber,
-  validationFlatnumber
+  validationFlatnumber,
 } = formSlice.actions;
 export default formSlice.reducer;

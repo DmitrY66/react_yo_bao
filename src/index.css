@@ -300,3 +300,12 @@ input:focus {
   color: #fff !important;
   background-color: #ff2e65 !important;
 }
+
+/* .swiper-slide {
+
+} */
+
+.swiper-button-next::after {
+  font-size: 122px;
+  color: red;
+}

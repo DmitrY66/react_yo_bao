@@ -20,6 +20,7 @@ export const SectionHero = () => {
         {/* <img src={yoBaoHeader} alt='hero-slider illustration main' /> */}
 
         <Swiper
+          className='hero_swiper'
           modules={[Navigation, Pagination, Autoplay, A11y, EffectCube]}
           spaceBetween={10}
           slidesPerView={1}
@@ -44,16 +45,16 @@ export const SectionHero = () => {
           </SwiperSlide
           >
           <SwiperSlide>
-            <img className={st.slide_image} src={hero0} alt='hero-slider delivery 0' />
+            <img className={st.slide_image} src={hero2} alt='hero-slider delivery 2' />
           </SwiperSlide>
 
-          <SwiperSlide>
+          {/* <SwiperSlide>
             <img className={st.slide_image} src={yoBaoHeader} alt='hero-slider illustration main' />
           </SwiperSlide>
 
           <SwiperSlide>
             <img className={st.slide_image} src={hero2} alt='hero-slider delivery 2' />
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </section >

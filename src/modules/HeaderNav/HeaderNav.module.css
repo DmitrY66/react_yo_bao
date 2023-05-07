@@ -44,24 +44,33 @@
 @media (max-width: 1080px) {
   .header_nav {
     justify-content: start;
-    gap: 50px;
     padding: 0 25px;
   }
   .btn_menu {
     display: block;
+    margin-right: 50px;
+  }
+  .log_in {
+    margin-right: 50px;
   }
 }
 
 @media (max-width: 600px) {
   .header_nav {
     flex-wrap: wrap;
-    gap: 10px;
     padding: 0 12px;
+  }
+  .btn_menu {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .log_in {
+    margin-right: 10px;
   }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .header_nav {
     justify-content: space-between;
   }
-}
+} */

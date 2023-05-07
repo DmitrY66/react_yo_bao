@@ -3,17 +3,50 @@ import { NavLink } from 'react-router-dom';
 import { BtnViolSq } from 'src/components/BtnViolSq/BtnViolSq';
 import { Navigation } from 'src/components/Navigation/Navigation';
 import st from './HeaderNav.module.css';
+import { useState } from 'react';
+import { Registration } from 'src/components/Registration/Registration';
 
 export const HeaderNav = () => {
   const { totalCount } = useSelector((state) => state.order);
+  const [menuActive, setMenuActive] = useState(false);
+  const [registrationActive, setRegistrationActive] = useState(false);
+
+  const handlerModal = () => {
+    setRegistrationActive(!registrationActive);
+
+    const body = document.body;
+    const widthBefore = body.offsetWidth;
+    if (body.style.overflow === '') {
+      body.style.overflow = 'hidden';
+      body.style.marginRight = body.offsetWidth - widthBefore + 'px';
+    } else {
+      body.style.overflow = '';
+      body.style.marginRight = '';
+    }
+  };
 
   return (
     <div className={`${st.header_nav} container`}>
-      <Navigation />
+      <Navigation
+        menuActive={menuActive}
+        setMenuActive={setMenuActive}
+      />
 
-      <button className={st.btn_menu}>Меню</button>
+      <button
+        className={st.btn_menu}
+        onClick={() => setMenuActive(!menuActive)}
+      >Меню</button>
 
-      <button className={st.log_in}>Войти</button>
+      <button
+        className={st.log_in}
+        onClick={handlerModal}
+      >Войти</button>
+
+      <Registration
+        registrationActive={registrationActive}
+        setRegistrationActive={setRegistrationActive}
+        handlerModal={handlerModal}
+      />
 
       <NavLink className={st.header_nav_link} to='/cart'>
         <BtnViolSq>

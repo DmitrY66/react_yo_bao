@@ -47,14 +47,6 @@ export const SectionHero = () => {
           <SwiperSlide>
             <img className={st.slide_image} src={hero2} alt='hero-slider delivery 2' />
           </SwiperSlide>
-
-          {/* <SwiperSlide>
-            <img className={st.slide_image} src={yoBaoHeader} alt='hero-slider illustration main' />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <img className={st.slide_image} src={hero2} alt='hero-slider delivery 2' />
-          </SwiperSlide> */}
         </Swiper>
       </div>
     </section >

@@ -12,28 +12,27 @@ import { Actions } from 'src/pages/Actions/Actions';
 import { SectionCart } from 'src/modules/SectionCart/SectionCart';
 import { SectionMakingOrder } from 'src/modules/SectionMakingOrder/SectionMakingOrder';
 import { SectionOrderSuccess } from 'src/modules/SectionOrderSuccess/SectionOrderSuccess';
+import { Registration } from 'src/components/Registration/Registration';
 
 const App = () => {
 
   return (
     <Provider store={store}>
-      <>
-        <Routes>
-          <Route path='/*' element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path='cat' element={<Categories />}>
-              <Route path='pasta' element={<CatPasta />} />
-              <Route path='soup' element={<CatSoup />} />
-            </Route>
-            <Route path='contacts' element={<Contacts />} />
-            <Route path='actions' element={<Actions />} />
-            <Route path='cart' element={<SectionCart />} />
-            <Route path='makingorder' element={<SectionMakingOrder />} />
-            <Route path='ordersuccess' element={<SectionOrderSuccess />} />
-            <Route path='*' element={<Error404 />} />
+      <Routes>
+        <Route path='/*' element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='cat' element={<Categories />}>
+            <Route path='pasta' element={<CatPasta />} />
+            <Route path='soup' element={<CatSoup />} />
           </Route>
-        </Routes>
-      </>
+          <Route path='contacts' element={<Contacts />} />
+          <Route path='actions' element={<Actions />} />
+          <Route path='cart' element={<SectionCart />} />
+          <Route path='makingorder' element={<SectionMakingOrder />} />
+          <Route path='ordersuccess' element={<SectionOrderSuccess />} />
+          <Route path='*' element={<Error404 />} />
+        </Route>
+      </Routes>
     </Provider>
   );
 }
